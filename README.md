@@ -1,11 +1,12 @@
-# Movie recommender
+**Movie recommender**
 
 This is a movie recommender pipeline.
 
-The final product allows user to rate 3 movies get recommendations based on these ratings
-(as well as on the the ratings of many more users).
+The final product allows user to rate 3 movies get recommendations for other movies based on these ratings.
+You can access the movie recommender via https://superfancymovierec.herokuapp.com/
 
-You can access the movie recommender on https://superfancymovierec.herokuapp.com/
+![recommender example](movie_rec_example.png "Rate three movies and get recommendations")
 
-The backend of the movie recommender is a NMF (Non-negative matrix factorization) model
-which makes use of the large and free databank of MovieLens.
+The backend of the movie recommender is a NMF (Non-negative matrix factorization) model.  
+
+Data is retrieved from MovieLens.
