@@ -6,7 +6,7 @@ def get_pic_link(movie_titles):
     Input:
     List of movie titles (list)
     Output:
-    List with Url-links to picture, using https://www.omdbapi.com/ API
+    List with Url-links to picture
     """
 
     # turn movie titles into movie Ids:

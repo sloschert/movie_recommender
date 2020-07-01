@@ -19,7 +19,6 @@ def nmf(films, ratings):
         for i in films:
             if dic_title_id[i] in top_films:
                 top_films.remove(dic_title_id[i])
-        # to do: add again a new film for each movie removed!
         return top_films
 
     def get_movie_title2(movieId):
@@ -32,7 +31,6 @@ def nmf(films, ratings):
     nmf = pickle.load( open( "flask_app/pickle_files/nmf_100.p", "rb" ) )
     P = pickle.load( open( "flask_app/pickle_files/p.p", "rb" ) )
     Q = pickle.load( open( "flask_app/pickle_files/q.p", "rb" ) )
-    #predictions = pickle.load( open("pickle_files/predictions.p", "rb"))
     dic_id_title = pickle.load( open("flask_app/pickle_files/dic_id_title.p", "rb"))
     dic_title_id = pickle.load( open("flask_app/pickle_files/dic_title_id.p", "rb"))
     predictions_mean = pickle.load( open("flask_app/pickle_files/predictions_mean.p", "rb"))
@@ -40,11 +38,6 @@ def nmf(films, ratings):
 
     ratings = np.array(ratings)
     ratings = ratings.astype('float')
-
-    ## do not put zeros, but the mean:
-    #query = np.array([predictions_mean]* len(predictions_columns))
-
-    ## uncomment the following line to fill up with zeros:
     query = np.zeros(len(predictions_columns))
 
     count = 0

@@ -7,11 +7,6 @@ from flask_app import get_movie_pics
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/index')
-def index():
-    return render_template('index.html')
-
-
 @app.route('/movies')
 def movies():
     num = 3
