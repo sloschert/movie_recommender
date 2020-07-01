@@ -1,0 +1,44 @@
+
+    <title>Your results</title>
+    <style>
+      img {
+        width: 130;
+      }
+    </style>
+    {% extends '_base.html' %}
+    {% block content %}
+
+    <h1>Recommendations</h1>
+
+    <h3>You should definitely watch these films:</h3>
+
+    <ul>
+      {% for m in movies_html %}
+        <li>{{ m }}</li>
+      {% endfor %}
+    </ul>
+
+    {% for pic in recommended_pics %}
+    <img src="{{pic}}" alt="movie pic">
+    {% endfor %}
+
+    <h3>Just a reminder, you voted for:</h3>
+
+    {% for m in user_movies %}
+      {{ m }}<br>
+    {% endfor %}
+    <br>
+    <p>with ratings:</p>
+
+    {% for m in user_ratings %}
+      {{ m }}
+    {% endfor %}
+    <br>
+
+<!-- 
+    {% for pic in already_seen_pics %}
+    <img src="{{pic}}" alt="movie pic">
+    {% endfor %} -->
+
+
+  {% endblock %}
